@@ -1,0 +1,65 @@
+
+body {
+  font-family: sans-serif;
+}
+
+.center {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+.slidein {
+  animation-duration: 1s;
+  animation-name: slidein;
+  // animation-iteration-count: infinite;
+}
+
+.slideout {
+  animation-duration: 1s;
+  animation-name: slideout;
+  // animation-iteration-count: infinite;
+}
+
+.toast {
+  .container {
+    // border: 1px solid red;
+    background-color: gray;
+    display: inline-block;
+    border-radius: 3px;
+    .text {
+      display: inline-block;
+      color: white;
+      padding: 10px 8px;
+    }
+    i {
+      color: white;
+      // margin: 0px 10px 0px 0px;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-top: -10%;
+    /* width: 300%; */
+  }
+
+  to {
+    margin-top: 0%;
+    /* width: 100%; */
+  }
+}
+
+@keyframes slideout {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
