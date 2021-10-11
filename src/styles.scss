@@ -1,14 +1,11 @@
-
 body {
   font-family: sans-serif;
 }
 
-.center {
-  position: absolute;
-  top: 0;
-  right: 0;
+button {
+  position: relative;
+  z-index: 50000;
 }
-
 
 .slidein {
   animation-duration: 1.5s;
@@ -16,30 +13,49 @@ body {
   // animation-iteration-count: infinite;
 }
 
-.slideout {
-  animation-duration: 1.5s;
-  animation-name: slideout;
+.toast-move-up-in {
+  animation-duration: 0.3s;
+  animation-name: antMoveUpIn;
   // animation-iteration-count: infinite;
 }
+.toast-move-up-out {
+  animation-duration: 0.3s;
+  animation-name: antMoveUpOut
+}
 
+.toast--top {
+  z-index: 1010;
+  position: fixed;
+  top: 5%;
+  width: 100%;
+}
+
+.toast--bottom {
+  z-index: 1010;
+  position: fixed;
+  width: 100%;
+  bottom: 5%; 
+}
 .toast {
-  .container {
-    // border: 1px solid red;
-    background-color: gray;
-    display: inline-block;
-    border-radius: 3px;
-    .text {
+  width: 100%;
+  text-align: center;
+  .toast--container {
+      text-align: center;
       display: inline-block;
-      color: white;
-      padding: 10px 8px;
+      // margin: 0 30%;
+      background-color: gray;
+      border-radius: 3px;
+      .text {
+        display: inline-block;
+        color: white;
+        padding: 10px 8px;
+      }
+      i {
+        color: white;
+        margin-right: 8px;
+        cursor: pointer;
+      }
     }
-    i {
-      color: white;
-      // margin: 0px 10px 0px 0px;
-      margin-right: 8px;
-      cursor: pointer;
-    }
-  }
 }
 
 @keyframes slidein {
@@ -54,12 +70,29 @@ body {
   }
 }
 
-@keyframes slideout {
-  from {
+
+@keyframes antMoveUpOut {
+  0% {
+    transform: translateY(0%);
+    transform-origin: 0 0;
     opacity: 1;
   }
-
-  to {
+  100% {
+    transform: translateY(-100%);
+    transform-origin: 0 0;
     opacity: 0;
+  }
+}
+
+@keyframes antMoveUpIn {
+  0% {
+    transform: translateY(-100%);
+    transform-origin: 0 0;
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    transform-origin: 0 0;
+    opacity: 1;
   }
 }
