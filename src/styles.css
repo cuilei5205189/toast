@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+}
+
+.slidein {
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
+
+.slideout {
+  animation-duration: 2s;
+  animation-name: slideout;
+  animation-iteration-count: infinite;
+}
+
+p {
+  color: white;
+  padding: 30px;
+  width: 100px;
+  border: 1px solid red;
+  background-color: gray;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: -10%;
+    /* width: 300%; */
+  }
+
+  to {
+    margin-top: 0%;
+    /* width: 100%; */
+  }
+}
+
+@keyframes slideout {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
