@@ -17,7 +17,7 @@ function slideout() {
 
 function remove() {
   slideout()
-  setTimeout(() => toast.remove(), 1000)
+  setTimeout(() => toast.remove(), 1500)
 }
 
 toast.addEventListener('animationend', remove)
