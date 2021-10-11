@@ -1,6 +1,5 @@
 import "./styles.css";
-import "@fortawesome/fontawesome-free/scss/fontawesome";
-// import "@fortawesome/fontawesome-free/js/all.js";
+import "font-awesome/css/font-awesome.min.css";
 
 const toast = document.querySelector(".toast");
 

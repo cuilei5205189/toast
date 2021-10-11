@@ -14,7 +14,7 @@ body {
   animation-iteration-count: infinite;
 }
 
-p {
+.toast {
   color: white;
   padding: 30px;
   width: 100px;
